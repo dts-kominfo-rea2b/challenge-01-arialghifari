@@ -6,7 +6,7 @@ const firstUser = {
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: ["Yellow", "Pink", "White", "Purple"],
+  favoriteColor: [...new Set(["Yellow", "Pink", "White", "Purple", "Purple"])],
   isHavePet: true,
   education: [
     { name: "SD 01", city: "Jakarta", graduate: 2016 },
@@ -14,13 +14,19 @@ const firstUser = {
     { name: "SMA 03", city: "Tangerang" },
   ],
   favoriteRestaurant: [
-    "Bento",
-    "Sushi",
-    "Pancake",
-    "Eggy",
-    "Tempura",
-    "Padang",
-    "Tteok",
+    ...new Set([
+      "Bento",
+      "Sushi",
+      "Pancake",
+      "Eggy",
+      "Tempura",
+      "Bento",
+      "Eggy",
+      "Padang",
+      "Tteok",
+      "Sushi",
+      "Sushi",
+    ]),
   ],
 };
 
@@ -29,7 +35,7 @@ const secondUser = {
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: ["Blue", "Black", "Grey"],
+  favoriteColor: [...new Set(["Blue", "Black", "Grey", "Black"])],
   isHavePet: false,
   education: [
     { name: "SD 02", city: "Jakarta", graduate: 2010 },
@@ -38,14 +44,17 @@ const secondUser = {
     { name: "Universitas Maju", city: "Tangerang" },
   ],
   favoriteRestaurant: [
-    "Tempura",
-    "Bento",
-    "Sushi",
-    "Pancake",
-    "Padang",
-    "Katsu",
-    "Geprek",
-    "Eggy",
+    ...new Set([
+      "Tempura",
+      "Bento",
+      "Sushi",
+      "Pancake",
+      "Padang",
+      "Katsu",
+      "Geprek",
+      "Pancake",
+      "Eggy",
+    ]),
   ],
 };
 
